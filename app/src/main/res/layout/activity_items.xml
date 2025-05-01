@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Items"
+    >
+
+    <!-- ACTION BAR CON ICONO DE VOLVER ATRAS Y TITULO DE LA INTERFAZ -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red_600"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/returnBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/returnback"
+                android:layout_marginStart="-5dp"
+                android:layout_alignParentStart="true"
+                >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/titleApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-5dp"
+                android:fontFamily="@font/silkscreen"
+                android:text="@string/Items"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_below="@id/my_toolbar"
+        app:defaultQueryHint="@string/searItem"
+        />
+
+
+
+    <!-- LISTA DE LOS ITEMS EXISTENTES EN EL JUEGO -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokeItemList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchItem"
+        android:layout_above="@id/navigator_bar_bottom"
+        tools:listitem="@layout/recycler_list_layout_pokeitem"
+        />
+
+
+    <!-- BARRA DE NAVEGACION INFERIOR CON MENU PERSONALIZABLE -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigator_bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_navigation_bottom_bar"
+        app:itemIconSize="35dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@color/red_600"
+        app:labelVisibilityMode="unlabeled"
+        app:elevation="3dp"
+        />
+</RelativeLayout>

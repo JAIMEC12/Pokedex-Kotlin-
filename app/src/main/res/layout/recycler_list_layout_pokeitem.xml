@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- LAYOUT O PLANTILLA QUE VA A TENER CADA ITEM DE LA LISTA -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- CONTENEDOR DE LA IMAGEN Y DESCRIPCION DEL ITEM -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        app:contentPadding="10dp"
+        app:cardCornerRadius="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <!-- IMAGEN DEL ITEM -->
+            <ImageView
+                android:id="@+id/ItemImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pokeball_icon"
+                />
+            <!-- NOMBRE DEL ITEM -->
+            <TextView
+                android:id="@+id/itemText"
+                android:layout_width="match_parent"
+                android:layout_toEndOf="@id/ItemImage"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/silkscreen"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

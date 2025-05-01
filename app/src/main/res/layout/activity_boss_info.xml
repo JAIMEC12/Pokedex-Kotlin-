@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BossInfo">
+
+    <!-- REFERENCIAS -->
+
+
+    <!-- ACTION BAR CON ICONO DE VOLVER ATRAS Y TITULO DE LA INTERFAZ -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red_600"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/returnBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/returnback"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/RBack"
+                >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/titleApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/silkscreen"
+                android:text="@string/BossesInfo"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- CONTENEDOR DE LA INFO DEL BOSS -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        app:contentPadding="15dp"
+        android:layout_below="@id/my_toolbar"
+        app:cardCornerRadius="20dp">
+
+        <!-- DENTRO DEL CONTENEDOR UN VISTA SCROLL SI EL CONTENIDO LLEGA A SER GRANDE -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- IMAGEN DEL BOSS, POR DEFECTO LA DE UNA POKEBALL-->
+                <ImageView
+                    android:id="@+id/BossInfoImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pokeball_icon"
+                    android:contentDescription="@string/app_name"
+                    />
+
+                <!-- NOMBRE DEL BOSS -->
+                <TextView
+                    android:id="@+id/bossName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/BossInfoImage"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    android:layout_margin="25dp"
+                    />
+
+                <!-- CONTENEDOR DEL TIPO DE GIMNASIO DEL BOSS -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/BossType_Container"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bossName"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="25dp"
+                    >
+                    <TextView
+                        android:id="@+id/BossType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="20sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- SECCION DEL EQUIPO POKEMON DEL BOSS -->
+                <TextView
+                    android:id="@+id/titleBossPokeTeam"
+                    android:layout_below="@id/BossType_Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    android:text="@string/BossTeam"
+                    />
+
+                <!-- LA LISTA DE POKEMONES QUE POSEE EN SU EQUIPO  -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bossTeam"
+                    android:layout_below="@id/titleBossPokeTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/recycler_list_layout_poketeam"/>
+
+                <!-- CONTENEDOR DE LA INFO DEL BOSS -->
+                <TextView
+                    android:id="@+id/bossMedal"
+                    android:layout_below="@id/bossTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Medalla"
+                    android:layout_margin="25dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    />
+
+                <!-- IMAGEN DE LA MEDALLA RECIBIDAD POR EL BOSS -->
+                <ImageView
+                    android:id="@+id/bossMedalImage"
+                    android:layout_below="@id/bossMedal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pokeball_icon"
+                    android:layout_marginBottom="25dp"
+                    android:contentDescription="@string/Medalla"
+                    />
+
+                <!-- BOTON PARA INDICAR EL BOSS FUE VENCIDO, POR LO TANTO, MEDALLA OBTENIDA -->
+                <Button
+                    android:padding="20dp"
+                    android:id="@+id/btnBossDefeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bossMedalImage"
+                    android:layout_margin="25dp"
+                    android:text="@string/bossDefeat"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    />
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

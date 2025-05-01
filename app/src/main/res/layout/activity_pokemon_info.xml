@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- ACTION BAR CON ICONO DE VOLVER ATRAS Y TITULO DE LA INTERFAZ -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red_600"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/returnBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/returnback"
+                android:layout_marginStart="-5dp"
+                android:layout_alignParentStart="true"
+                >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/titleApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-5dp"
+                android:fontFamily="@font/silkscreen"
+                android:text="@string/PokeInfo"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- CONTENEDOR DE LA INFORMACION DEL POKEMON -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        app:contentPadding="15dp"
+        app:cardCornerRadius="20dp"
+        >
+        <!-- VISTA SCROLL SI LA INFORMACION LLEGA A SER BASTANTE -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- IMAGEN DEL POKEMON, POR DEFECTO, ES UNA POKEBALL -->
+                <ImageView
+                    android:id="@+id/PokeInfoImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pokeball_icon"
+                    android:contentDescription="@string/app_name"
+                    />
+
+                <!-- NOMBRE DEL POKEMON -->
+                <TextView
+                    android:id="@+id/PokeNameInfo"
+                    android:layout_margin="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/PokeInfoImage"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    />
+
+                <!-- CONTENEDOR DEL TIPO DE POKEMON -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/PokeType1_Container"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/PokeNameInfo"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="25dp"
+                    >
+                    <!-- NOMBRE DEL TIPO DE POKEMON -->
+                    <TextView
+                        android:id="@+id/PokeType1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="20sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <!-- SEGUNDO CONTENEDOR DEL TIPO DE POKEMON, SI TIENE UN SEGUNDO TIPO -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/PokeType2_Container"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/PokeNameInfo"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="15dp"
+                    android:layout_margin="25dp"
+                    android:visibility="gone"
+                    >
+                    <!-- NOMBRE DEL SEGUNDO TIPO DE POKEMON -->
+                    <TextView
+                        android:id="@+id/PokeType2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="20sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <!-- DESCRIPCION DEL POKEMON -->
+                <TextView
+                    android:id="@+id/titleDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_below="@id/PokeType1_Container"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    android:layout_margin="25dp"
+                    android:text="@string/Description"
+                    />
+
+                <TextView
+                    android:id="@+id/pokeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="20sp"
+                    android:layout_below="@id/titleDescription"
+                    android:layout_margin="15dp"
+                    />
+
+                <!-- NOMBRE Y DESCRIPCION DE LAS HABILIDADES -->
+                <TextView
+                    android:id="@+id/titleAbility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:layout_below="@id/pokeDescription"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    android:text="@string/Ability"
+                    />
+
+                <!-- LISTA DE HABILIDADES DEL POKEMON -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/abilitiesRecyclerList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleAbility"
+                    android:layout_margin="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/recycler_list_layout_infoabilities" />
+
+                <!-- ESTADISTICAS DEL POKEMON -->
+                <TextView
+                    android:id="@+id/titleStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:layout_below="@id/abilitiesRecyclerList"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="30sp"
+                    android:text="@string/Stats"
+                    />
+
+                <!-- CONTENEDOR DE LAS ESTADISTICAS DEL POKEMON -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/statsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/titleStats"
+                    android:layout_margin="15dp"
+                    app:cardCornerRadius="15dp"
+                    app:contentPadding="15dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- VIDA DEL POKEMON Y SU BARRA DE NIVEL -->
+                        <TextView
+                            android:id="@+id/titleHp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Hp"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/PokeStatHp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_below="@id/titleHp"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressHP"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:layout_below="@id/titleHp"
+                            android:layout_toEndOf="@id/PokeStatHp"
+                            android:max="300"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/custom_progress_bar"
+                            />
+
+
+                        <!-- ATAQUE DEL POKEMON Y SU BARRA DE NIVEL -->
+                        <TextView
+                            android:id="@+id/titleAtk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Atk"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:layout_below="@id/PokeStatHp"
+                            />
+
+                        <TextView
+                            android:id="@+id/PokeStatAtk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleAtk"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressAtk"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:layout_below="@id/titleAtk"
+                            android:layout_toEndOf="@id/PokeStatAtk"
+                            android:max="300"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/custom_progress_bar"
+                            />
+
+
+                        <!-- DEFENSA DEL POKEMON Y SU BARRA DE NIVEL -->
+                        <TextView
+                            android:id="@+id/titleDef"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Def"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:layout_below="@id/PokeStatAtk"
+                            />
+
+                        <TextView
+                            android:id="@+id/PokeStatDef"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleDef"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            android:layout_centerVertical="true"
+                            />
+                        <ProgressBar
+                            android:id="@+id/ProgressDef"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:max="300"
+                            android:progress="0"
+                            android:layout_below="@id/titleDef"
+                            android:layout_toEndOf="@id/PokeStatDef"
+                            android:progressDrawable="@drawable/custom_progress_bar"
+                            />
+
+
+                        <!-- ATAQUE ESPECIAL DEL POKEMON Y SU BARRA DE NIVEL -->
+                        <TextView
+                            android:id="@+id/titleSpA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/SpA"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:layout_below="@id/PokeStatDef"
+                            />
+
+                        <TextView
+                            android:id="@+id/PokeStatSpA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleSpA"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressSpA"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:layout_below="@id/titleSpA"
+                            android:layout_toEndOf="@id/PokeStatSpA"
+                            android:max="300"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/custom_progress_bar"
+                            />
+
+
+                        <!-- DEFENSA ESPECIAL DEL POKEMON Y SU BARRA DE NIVEL -->
+                        <TextView
+                            android:id="@+id/titleSpD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Spd"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:layout_below="@id/PokeStatSpA"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/PokeStatSpD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleSpD"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressSpD"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:max="300"
+                            android:progress="0"
+                            android:layout_below="@id/titleSpD"
+                            android:layout_toEndOf="@id/PokeStatSpD"
+                            android:progressDrawable="@drawable/custom_progress_bar"
+                            />
+
+
+                        <!-- VELOCIDAD DEL POKEMON Y SU BARRA DE NIVEL -->
+                        <TextView
+                            android:id="@+id/titleSpe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Spe"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:layout_below="@id/PokeStatSpD"
+                            />
+
+                        <TextView
+                            android:id="@+id/PokeStatSpe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/titleSpe"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:padding="15dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/ProgressSpe"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:max="300"
+                            android:progress="0"
+                            android:layout_below="@id/titleSpe"
+                            android:layout_toEndOf="@id/PokeStatSpe"
+                            android:progressDrawable="@drawable/custom_progress_bar"
+                            />
+
+                        <!-- TOTAL DE LAS ESTADISTICAS DEL POKEMON -->
+                        <TextView
+                            android:id="@+id/titleStatsTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/PokeStatSpe"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:text="@string/StatsTotal"
+                            android:layout_margin="15dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/PokeStatTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/PokeStatSpe"
+                            android:textAlignment="center"
+                            android:layout_toEndOf="@id/titleStatsTotal"
+                            android:fontFamily="@font/silkscreen"
+                            android:textSize="20sp"
+                            android:layout_margin="15dp"
+                            />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- BOTON PARA INDICAR SI EL POKEMON FUE CAPTURADO -->
+                <Button
+                    android:id="@+id/btn_pokemonCaptured"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:layout_below="@id/statsContainer"
+                    android:fontFamily="@font/silkscreen"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:text="@string/pokemonCaptured"
+                    />
+
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

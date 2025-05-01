@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">PokeRed</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="SubTitle1">Progreso</string>
+    <string name="Poke_Quantity">Pokemon Atrapados: </string>
+    <string name="Medals_Quantity">Medalla Ganadas: </string>
+    <string name="Play_Mode">Dificultad: Hardcore</string>
+    <string name="Percent_default">0.00%</string>
+    <string name="Card_Poke_Title">PokeInfo</string>
+    <string name="Hp">Health points</string>
+    <string name="Atk">Attack</string>
+    <string name="Def">Defense</string>
+    <string name="SpA">Special Attack</string>
+    <string name="Spd">Special Defense</string>
+    <string name="Spe">Speed</string>
+    <string name="Pokedex">Pokedex</string>
+    <string name="Items">Items</string>
+    <string name="PokeInfo">PokeInfo</string>
+    <string name="Description">Descripción</string>
+    <string name="Stats">Stats</string>
+    <string name="Ability">Habilidades</string>
+    <string name="ItemInfo">ItemInfo</string>
+    <string name="ItemEffect">Efecto</string>
+    <string name="ItemName">Item</string>
+    <string name="Cost">Precio</string>
+    <string name="StatsTotal">Total:</string>
+    <string name="PokeBosses">Bosses</string>
+    <string name="BossesInfo">BossInfo</string>
+    <string name="Medalla">Medalla</string>
+    <string name="BossTeam">BossTeam</string>
+    <string name="Home">Home</string>
+    <string name="bossDefeat">Agregar A Coleccion</string>
+    <string name="pokemonCaptured">Pokemon Atrapado?</string>
+    <string name="MedalsGanada">Medallas Ganadas</string>
+    <string name="LackOfMedals">Sin Medallas, Intente Agregar Una</string>
+    <string name="Pokemon">Pokemon</string>
+    <string name="PokemonAgregado"> Pokemon Agregado</string>
+    <string name="MedallaAgrerada">Medalla Agregada</string>
+    <string name="RBack">Volver Atras</string>
+    <string name="txtChainEvolution">Cadena de Evolucion</string>
+    <string name="search">Buscar pokemon</string>
+    <string name="searItem">Buscar item</string>
+</resources>

@@ -1,0 +1,361 @@
+
+[
+  {
+    "boss_name": "BROCK",
+    "boss_image": "https://i.ibb.co/v10Rh61/Brock.png",
+    "pokemon_team": [
+      {
+        "id": 449,
+        "name": "Hippopotas",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/449.png",
+        "level": 13
+      },
+      {
+        "id": 331,
+        "name": "Cacnea",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/331.png",
+        "level": 15
+      },
+      {
+        "id": 337,
+        "name": "Lunatone",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png",
+        "level": 14
+      },
+      {
+        "id": 345,
+        "name": "Lileep",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/345.png",
+        "level": 16
+      },
+      {
+        "id": 566,
+        "name": "Archen",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/566.png",
+        "level": 14
+      },
+      {
+        "id": 965,
+        "name": "Varoom",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/965.png",
+        "level": 15
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/1.png",
+    "boss_type": "ROCK"
+  },
+
+  {
+    "boss_name": "MISTY",
+    "boss_image": "https://i.ibb.co/mh2zYn4/Misty.png",
+    "pokemon_team":[
+      {
+        "id": 186,
+        "name": "Politoed",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png",
+        "level": 27
+      },
+      {
+        "id": 272,
+        "name": "Ludicolo",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png",
+        "level": 28
+      },
+      {
+        "id": 226,
+        "name": "Mantine",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/226.png",
+        "level": 27
+      },
+      {
+        "id":980,
+        "name": "Clodsire",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/980.png",
+        "level": 28
+      },
+      {
+        "id":121,
+        "name": "Starmie",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+        "level": 28
+      },
+      {
+        "id":454,
+        "name": "Toxicroak",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/454.png",
+        "level": 27
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/2.png",
+    "boss_type": "WATER"
+  },
+
+  {
+    "boss_name": "LT. SURGE",
+    "boss_image": "https://i.ibb.co/w6kjj5K/Surge.png",
+    "pokemon_team": [
+      {
+        "id":10010,
+        "name": "Rotom-F",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10010.png",
+        "level": 36
+      },
+      {
+        "id":10232,
+        "name": "Electrode-H",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10232.png",
+        "level": 36
+      },
+      {
+        "id":10100,
+        "name": "Raichu-A",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10100.png",
+        "level": 36
+      },
+      {
+        "id":106,
+        "name": "Hitmonlee",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+        "level": 36
+      },
+      {
+        "id":10045,
+        "name": "Ampharos-Mega",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10045.png",
+        "level": 36
+      },
+      {
+        "id": 923,
+        "name": "Pawmot",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/923.png",
+        "level": 36
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/3.png",
+    "boss_type": "ELECTRIC"
+  },
+
+  {
+    "boss_name": "ERIKA",
+    "boss_image": "https://i.ibb.co/z204J6T/Erika.png",
+    "pokemon_team": [
+      {
+        "id": 10275,
+        "name": "Ogerpon-C",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10275.png",
+        "level": 44
+      },
+      {
+        "id": 701,
+        "name": "Hawlucha",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png",
+        "level": 44
+      },
+      {
+        "id": 10065,
+        "name": "Sceptile-Mega",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10065.png",
+        "level": 44
+      },
+      {
+        "id": 849,
+        "name": "Toxtricity",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/849.png",
+        "level": 44
+      },
+      {
+        "id": 10165,
+        "name": "Slowbro-G",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10165.png",
+        "level": 44
+      },
+      {
+        "id": 798,
+        "name": "Kartana",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/798.png",
+        "level": 44
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/4.png",
+    "boss_type": "GRASS"
+  },
+
+  {
+    "boss_name": "SABRINA",
+    "boss_image": "https://i.ibb.co/m8V4wv5/Sabrina.png",
+    "pokemon_team": [
+      {
+        "id": 788,
+        "name": "Tapu Fini",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/788.png",
+        "level": 59
+      },
+      {
+        "id": 10087,
+        "name": "Camerupt-Mega",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10087.png",
+        "level": 59
+      },
+      {
+        "id": 896,
+        "name": "Glastrier",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/896.png",
+        "level": 59
+      },
+      {
+        "id": 801,
+        "name": "Magearna",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/801.png",
+        "level": 59
+      },
+      {
+        "id": 992,
+        "name": "Iron Hands",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/992.png",
+        "level": 59
+      },
+      {
+        "id": 593,
+        "name": "Jellicent",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/593.png",
+        "level": 59
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/5.png",
+    "boss_type": "PSYCHIC"
+  },
+
+  {
+    "boss_name": "KOGA",
+    "boss_image": "https://i.ibb.co/3THVf4D/Koga.png",
+    "pokemon_team": [
+      {
+        "id": 786,
+        "name": "Tapu Lele",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/786.png",
+        "level": 68
+      },
+      {
+        "id": 10086,
+        "name": "Hoopa-U",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10086.png",
+        "level": 68
+      },
+      {
+        "id": 553,
+        "name": "Krookodile",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/553.png",
+        "level": 68
+      },
+      {
+        "id": 1004,
+        "name": "Chi-Yu",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1004.png",
+        "level": 68
+      },
+      {
+        "id": 34,
+        "name": "Nidoking",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+        "level": 68
+      },
+      {
+        "id":10219,
+        "name": "Toxtricity-Gmax",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10219.png",
+        "level": 68
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/6.png",
+    "boss_type": "POISON"
+  },
+  {
+    "boss_name": "BLAINE",
+    "boss_image": "https://i.ibb.co/zQPJrBn/Blaine.png",
+    "pokemon_team": [
+      {
+        "id": 989,
+        "name": "Sandy Shocks",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/989.png",
+        "level": 76
+      },
+      {
+        "id":984,
+        "name": "Great Tusk",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/984.png",
+        "level": 76
+      },
+      {
+        "id":1009,
+        "name": "Walking Wake",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1009.png",
+        "level": 76
+      },
+      {
+        "id": 3,
+        "name": "Venusaur",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+        "level": 76
+      },
+      {
+        "id": 250,
+        "name": "Ho-Oh",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
+        "level": 76
+      },
+      {
+        "id":10034,
+        "name": "Charizard-MegaX",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10034.png",
+        "level": 76
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/7.png",
+    "boss_type": "FIRE"
+  },
+
+  {
+    "boss_name": "CLAIR",
+    "boss_image": "https://i.ibb.co/yFkD5QH/Clair.png",
+    "pokemon_team": [
+      {
+        "id":213,
+        "name": "Shuckle",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
+        "level": 81
+      },
+      {
+        "id":1005,
+        "name": "Roaring Moon",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1005.png",
+        "level": 81
+      },
+      {
+        "id":801,
+        "name": "Magearna",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/801.png",
+        "level": 81
+      },
+      {
+        "id":10157,
+        "name": "Necrozma-Ultra",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10157.png",
+        "level": 81
+      },
+      {
+        "id":890,
+        "name": "Eternatus",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/890.png",
+        "level": 81
+      },
+      {
+        "id":1018,
+        "name": "Archaludon",
+        "url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png",
+        "level": 81
+      }
+    ],
+    "boss_medal": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/badges/8.png",
+    "boss_type": "DRAGON"
+  }
+]

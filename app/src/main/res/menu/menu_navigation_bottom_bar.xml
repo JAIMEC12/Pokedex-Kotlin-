@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- MENU DE LA APP -->
+    <item
+        android:id="@+id/icon_home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/Home"
+        />
+    <item
+        android:id="@+id/icon_item"
+        android:icon="@drawable/item_pokemon_icon"
+        android:title="@string/Items"
+        />
+    <item
+        android:id="@+id/icon_pokedex"
+        android:icon="@drawable/pokedex_icon"
+        android:title="@string/Pokedex"
+        />
+    <item
+        android:id="@+id/icon_boss"
+        android:icon="@drawable/crown_pokemon_icon"
+        android:title="@string/PokeBosses"
+        />
+</menu>

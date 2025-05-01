@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    >
+
+    <!-- ACTION BAR CON TITULO DE LA INTERFAZ -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red_600"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/silkscreen"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- VISTA SCROLL SI EL CONTENIDO DEL HOME LLEGA A SER GRANDE QUE LA PANTALLA -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toolbar"
+        android:layout_above="@id/navigator_bar_bottom"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- CONTENEDOR DE LA INFORMACION DEL PROGRESO DEL JUEGO -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_progress"
+                android:layout_margin="25dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/white"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <!-- PROGRESO Y SU PORCENTAJE -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SubTitle1"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="30sp"
+                        android:padding="10dp"
+                        android:textAlignment="center"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/progressNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="25dp"
+                        android:text="@string/Percent_default"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        >
+                    </TextView>
+
+                    <!-- PORCENTAJE REPRESENTADO EN UNA BARRA -->
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!-- CONTENEDOR DE LA INFORMACION DEL USUARIO -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_progress"
+                android:layout_margin="25dp"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp"
+                app:cardBackgroundColor="@color/white"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/Card_Poke_Title"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="30sp"
+                        >
+                    </TextView>
+
+                    <!-- CANTIDAD DE POKEMONES CAPTURADOS -->
+                    <TextView
+                        android:id="@+id/pokemonCaptured"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Poke_Quantity"
+                        android:padding="15dp"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="15sp"
+                        android:layout_margin="5dp"
+                        >
+                    </TextView>
+
+                    <!-- CANTIDAD DE MEDALLAS GANADAS -->
+                    <TextView
+                        android:id="@+id/medalsGained"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Medals_Quantity"
+                        android:padding="15dp"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="15sp"
+                        android:layout_margin="5dp"
+                        >
+                    </TextView>
+
+                    <!-- MODALIDAD DEL JUEGO O DE LA GUIA -->
+                    <TextView
+                        android:id="@+id/pokemonMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Play_Mode"
+                        android:padding="15dp"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="15sp"
+                        android:layout_margin="5dp"
+                        >
+                    </TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- CONTENEDOR DE LAS MEDALLAS OBTENIDAS -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MedalCard"
+                android:layout_below="@id/card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:cardCornerRadius="15dp"
+                app:contentPadding="15dp"
+                app:cardBackgroundColor="@color/white"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <!-- TIPO DE GIMNASIO DE LA MEDALLA -->
+                    <TextView
+                        android:id="@+id/medalsGainedTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/MedalsGanada"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/silkscreen"
+                        />
+
+                    <!-- LISTA DE MEDALLAS GANADAS -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/userMedalList"
+                        android:layout_below="@id/medalsGainedTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/recycler_list_layout_usermedals"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        />
+
+                    <!-- SI NO TIENE UNA MEDALLA GANADA, APARECE UN MENSAJE DE SIN MEDALLAS -->
+                    <TextView
+                        android:id="@+id/lackMedalsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="center"
+                        android:text="@string/LackOfMedals"
+                        android:fontFamily="@font/silkscreen"
+                        android:textSize="30sp"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- BARRA DE NAVEGACION INFERIOR CON SU PROPIO MENU PERSONALIZABLE -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigator_bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_navigation_bottom_bar"
+        app:itemIconSize="35dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:elevation="3dp"
+        />
+</RelativeLayout>

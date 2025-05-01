@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.POKEMON_RED_RADICAL" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/red_800</item>
+        <item name="colorSecondary">@color/black_700</item>
+    </style>
+
+    <style name="Theme.POKEMON_RED_RADICAL" parent="Base.Theme.POKEMON_RED_RADICAL" />
+
+
+    <!-- SPLASHSCREEN Y SU PERSONALIZACION-->
+    <style name="Theme.POKEMON_RED_RADICAL.MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/app_icon_foreground</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.POKEMON_RED_RADICAL</item>
+    </style>
+    
+
+</resources>

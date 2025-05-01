@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- LAYOUT O PLANTILLA QUE VA A TENER CADA ITEM DE LA LISTA -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- CONTENEDOR DE LA IMAGEN Y NOMBRE DEL TIPO DE MEDALLA -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pok_card"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="10dp"
+        app:cardBackgroundColor="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- IMAGEN DE LA MEDALLA -->
+            <ImageView
+                android:id="@+id/medalImage"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/pokeball_icon"
+                android:layout_gravity="center"
+                />
+
+            <!-- NOMBRE DEL TIPO DE MEDALLA -->
+            <TextView
+                android:id="@+id/UserMedal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:fontFamily="@font/silkscreen"
+                android:textAlignment="center"
+                android:text="@string/Medalla"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

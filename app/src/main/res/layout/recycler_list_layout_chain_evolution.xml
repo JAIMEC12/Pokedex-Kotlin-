@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- LAYOUT O PLANTILLA QUE VA A TENER CADA ITEM DE LA LISTA -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- CONTENEDOR DE LA IMAGEN Y NOMBRE DEL POKEMON DE LISTA DE EQUIPO -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        app:contentPadding="15dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- IMAGEN DEL POKEMON -->
+            <ImageView
+                android:id="@+id/pokeTeamImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pokeball_icon"
+                />
+
+            <!-- NOMBRE DEL POKEMON -->
+            <TextView
+                android:id="@+id/pokeTeamName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/silkscreen"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

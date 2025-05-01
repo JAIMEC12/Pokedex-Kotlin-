@@ -1,0 +1,51 @@
+package pokeApi_Data
+
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
+
+//REFERENCIAS DE https://www.youtube.com/watch?v=oKuqqM5oolk&list=LL&index=1&t=137s
+
+/* INTERFAZ PARA DEFINIR LOS MÉTODOS CON LOS CUALES SE VAN A REALIZAR PETICIONES A LA REST API
+    BÁSICAMENTE EN ESTA SECCIÓN SE ESTABLECE COMO VA A SER LA COMUNICACIÓN CON LA POKEAPI Y EL COMPORTAMIENTO */
+
+interface PokeApiService {
+
+    //AQUÍ SE REALIZA SOLICITUDES HTTP USANDO EL MÉTODO GET PARA EXTRAER INFORMACIÓN
+
+    //MÉTODO PARA OBTENER LA INFORMACIÓN ESPECIFICA DE UN POKÉMON USANDO EL ID DEL POKÉMON
+    @GET("pokemon/{id}") //RUTA DONDE SE VA CONSULTAR LA INFORMACION, {id} VA A SER REEMPLAZADO EN LA FUNCION
+    fun getPokemonInfo(@Path("id") id: Int?): Call<Pokemon> //SE UTILIZA PATH PARA REEMPLAZAR EL VALOR {ID} POR EL DE LA FUNCION
+    //LA RESPUESTA DE LA LLAMADA SERA UN OBJETO TIPO POKEMON ENTREGADA POR CALL QUE ES UNA REPRESENTACION DE LA SOLICITUD HTTP
+
+
+    //METODO PARA OBTENER TODOS LOS POKEMONES DE LA POKEAPI
+    @GET("pokemon") //LA RUTA A LA CUAL SE REALIZA EL LLAMADO
+    fun getPokemonList(@Query("limit") limit: Int, @Query("offset") offset: Int): Call<PokeListResponse> //ENTREGA UN OBJETO TIPO POKELISTRESPONSE
+    /*SE AGREGA @QUERY PARA AGREGAR PARAMETROS DE CONSULTA EN LA RUTA (URL), LIMIT - CANTIDAD MAXIMA DE RESULTADOS
+        Y OFFSET -POSICION DESDE DONDE COMIENZA A CONTAR*/
+
+
+    //METODO PARA OBTENER INFORMACION ACERCA DE LA ESPECIE DEL POKEMON
+    @GET("pokemon-species/{name}")//RUTA DEL ENPOINT O LLAMADO
+    fun getPokemonSpecies(@Path("name") name: String) : Call<Pokemon> //ENTREGA UN OBJETO TIPO POKEMON
+
+
+    //METODO PARA OBTENER TODOS LOS ITEMS DE LA POKE API
+    @GET("item") //RUTA DEL ENPOINT Y ABAJO SUS PARAMETROS DE CONSULTA
+    fun getItemList(@Query("limit") limit: Int, @Query("offset") offset: Int): Call<PokeItemList> //ENTREGA UN OBJETO TIPO POKEITEMLIST
+
+    //METODO PARA OBTENER LOS DATOS DE UN ITEM EN ESPECIFICO DE LA POKE API
+    @GET("item/{id}")
+    fun getItemInfo(@Path("id") id:Int?): Call<Item> // ENTREGA UN OBJETO TIPO ITEM
+
+
+    //METODO PARA OBTENER LOS DETALLES DE LAS ABILIDAD DE UN POKEMON
+    @GET("ability/{name}")//RUTA DEL ENPOINT
+    fun getPokemonAbility(@Path("name") name : String): Call<Pokemon>// ENTREGA UN OBJETO TIPO POKEMON
+
+    @GET("evolution-chain/{id}")
+    fun getPokemonChainEvolution(@Path("id") id: Int?): Call<PokeChainEvolution>
+
+}
